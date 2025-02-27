@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
-    public static int health = 3;
+    public static int health = 32;
     [SerializeField] GameObject live3;
     [SerializeField] GameObject live2;
     [SerializeField] GameObject live1;
