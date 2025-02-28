@@ -7,6 +7,7 @@ public class CharacterControl : MonoBehaviour
     public float jumpForce = 2.0f;
     public float speed = 1.0f;
     private float baseSpeed;
+    private float baseJumpForce;
     
     private bool grounded = true;
     private bool jump;
@@ -31,6 +32,7 @@ public class CharacterControl : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         moving = true;
         baseSpeed = speed; // Set base speed to the original speed
+        baseJumpForce = jumpForce; // Save original jump force
     }
     private void FixedUpdate() 
     {
@@ -151,18 +153,29 @@ public class CharacterControl : MonoBehaviour
             
         }
         UpdateSpeed(); // Call the function here to update speed dynamically
-
+        UpdateJumpForce(); // call the function to update jump force
     }
     // Function to update speed based on stars
     private void UpdateSpeed()
     {
-        if (Score.score >= 27) // If player has 10 or more stars, increase speed
+        if (Score.score >= 15) // If player has 10 or more stars, increase speed
         {
             speed = baseSpeed * 1.5f; //  speed increase
         }
         else
         {
             speed = baseSpeed;  // Default speed
+        }
+    }
+    private void UpdateJumpForce()
+    {
+        if (Enemy.killcounter >= 5) // If player has killed 5+ enemies, increase jump
+        {
+            jumpForce = baseJumpForce * 1.5f; // Increase jump height by 50%
+        }
+        else
+        {
+            jumpForce = baseJumpForce; // Reset to default jump height
         }
     }
 
