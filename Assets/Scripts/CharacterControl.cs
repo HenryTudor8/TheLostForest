@@ -6,6 +6,7 @@ public class CharacterControl : MonoBehaviour
 {
     public float jumpForce = 2.0f;
     public float speed = 1.0f;
+    private float baseSpeed;
     
     private bool grounded = true;
     private bool jump;
@@ -29,6 +30,7 @@ public class CharacterControl : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         moving = true;
+        baseSpeed = speed; // Set base speed to the original speed
     }
     private void FixedUpdate() 
     {
@@ -148,7 +150,20 @@ public class CharacterControl : MonoBehaviour
             }
             
         }
-        
+        UpdateSpeed(); // Call the function here to update speed dynamically
+
+    }
+    // Function to update speed based on stars
+    private void UpdateSpeed()
+    {
+        if (Score.score >= 10) // If player has 10 or more stars, increase speed
+        {
+            speed = baseSpeed * 1.5f; //  speed increase
+        }
+        else
+        {
+            speed = baseSpeed;  // Default speed
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
