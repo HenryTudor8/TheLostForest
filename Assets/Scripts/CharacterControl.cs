@@ -156,7 +156,7 @@ public class CharacterControl : MonoBehaviour
     // Function to update speed based on stars
     private void UpdateSpeed()
     {
-        if (Score.score >= 10) // If player has 10 or more stars, increase speed
+        if (Score.score >= 27) // If player has 10 or more stars, increase speed
         {
             speed = baseSpeed * 1.5f; //  speed increase
         }
