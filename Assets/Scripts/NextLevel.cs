@@ -44,8 +44,8 @@ public class NextLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.gameObject.CompareTag("Player") && Score.carrot>2)
-        //if (other.gameObject.CompareTag("Player"))
+       // if (other.gameObject.CompareTag("Player") && Score.carrot>2)
+        if (other.gameObject.CompareTag("Player"))
         {
             if (SceneManager.GetActiveScene().buildIndex == 2)
             {
