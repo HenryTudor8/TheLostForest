@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckPoint : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class CheckPoint : MonoBehaviour
         if (other.gameObject.CompareTag("CheckPoint"))
         {
             deathWall.checkPos = other.transform.position;
+            //PlayerPrefs.SetInt("LastLevel", SceneManager.GetActiveScene().buildIndex);
+            //PlayerPrefs.Save();
         }
     }
+
+    
 }

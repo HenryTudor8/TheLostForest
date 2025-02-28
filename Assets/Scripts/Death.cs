@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
@@ -44,5 +45,14 @@ public class Death : MonoBehaviour
         _collider2D.enabled = true;
         CharacterControl.moving = true;
 
-    }
+    } 
+
+    /*void RestartSameLevel()
+    {
+        //Get current level index
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+
+        // Reload the same level instead of going back to Level 1
+        SceneManager.LoadScene(currentLevel);
+    }  */
 }

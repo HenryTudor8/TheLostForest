@@ -18,6 +18,12 @@ public class RestartGame : MonoBehaviour
         Death.deathcounter = 0;
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
+
+        // Get last level the player was on
+        int lastLevel = PlayerPrefs.GetInt("LastLevel", SceneManager.GetActiveScene().buildIndex);
+
+        // Restart the last level instead of always Level 1
+        SceneManager.LoadScene(lastLevel);
     }
     void RestartDelay()
     {
