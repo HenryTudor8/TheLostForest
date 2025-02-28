@@ -9,16 +9,38 @@ public class NextLevel : MonoBehaviour
     [SerializeField] public AudioSource _audiosource;
     [SerializeField] public GameObject ThinkingBallon;
     [SerializeField] public GameObject WinScene;
+
+    private void Start()
+    {
+        // Save the level number immediately when the level starts
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("LastLevel", currentLevel);
+        PlayerPrefs.Save();
+
+        Debug.Log("Saved LastLevel as: " + currentLevel); // Debug log to confirm saving
+    }
     public void SkipNextLevel()
     {
         Time.timeScale = 1;
         StartCoroutine(LoadLevel());
     }
-    IEnumerator LoadLevel(){
+    IEnumerator LoadLevel()
+    {
         yield return new WaitForSeconds(0.5f);
+
+        // Get the next level index
+        int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
+
+        // Save the level the player is entering
+        PlayerPrefs.SetInt("LastLevel", nextLevel);
+        PlayerPrefs.Save();
+
+        // Reset carrots and load next level
         Score.carrot = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(nextLevel);
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
