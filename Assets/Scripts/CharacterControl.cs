@@ -158,7 +158,7 @@ public class CharacterControl : MonoBehaviour
     // Function to update speed based on stars
     private void UpdateSpeed()
     {
-        if (Score.score >= 2) // If player has 10 or more stars, increase speed
+        if (Score.score >= 20) // If player has 10 or more stars, increase speed
         {
             speed = baseSpeed * 1.5f; //  speed increase
         }
@@ -169,7 +169,7 @@ public class CharacterControl : MonoBehaviour
     }
     private void UpdateJumpForce()
     {
-        if (Enemy.killcounter >= 1) // If player has killed 5+ enemies, increase jump
+        if (Enemy.killcounter >= 5) // If player has killed 5+ enemies, increase jump
         {
             jumpForce = baseJumpForce * 1.5f; // Increase jump height by 50%
         }
