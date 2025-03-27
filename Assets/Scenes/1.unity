@@ -42756,7 +42756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3046080299431551804, guid: c1771b4d70a390c448cd31daed90e107, type: 3}
       propertyPath: speed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3046080299431551804, guid: c1771b4d70a390c448cd31daed90e107, type: 3}
       propertyPath: resumeScreen
