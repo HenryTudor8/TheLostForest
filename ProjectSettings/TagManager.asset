@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags:
   - Ground
   - Star
@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Door
   - EndOfLevel
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - PLEASE_WORK
   - 
   - 
   - 
@@ -68,3 +69,18 @@ TagManager:
   - name: UI
     uniqueID: 4279186797
     locked: 0
+  - name: New Layer 7
+    uniqueID: 2997888611
+    locked: 0
+  - name: New Layer 8
+    uniqueID: 3843922045
+    locked: 0
+  - name: New Layer 9
+    uniqueID: 167413053
+    locked: 0
+  - name: PLEASE WORK
+    uniqueID: 3804878261
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  - Layer 1
