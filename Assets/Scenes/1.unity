@@ -313,7 +313,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68216066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -322,7 +322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -8, y: -3}
+  m_AnchoredPosition: {x: -62.8, y: 11.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &68216068
@@ -31165,6 +31165,7 @@ GameObject:
   - component: {fileID: 1768283539}
   - component: {fileID: 1768283538}
   - component: {fileID: 1768283537}
+  - component: {fileID: 1768283541}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -31260,6 +31261,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1768283541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768283536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b2b011ebeb14f4db3c032abf7dc9d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killText: {fileID: 68216068}
 --- !u!4 &1779441974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3667849592663431880, guid: 8c49da07be67ec24f8850ca29f6a5318, type: 3}
@@ -41811,44 +41825,56 @@ PrefabInstance:
       value: Charger Bee
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9229
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.518402
+      value: 9.4432
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.857852
+      value: -10.29
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53.019474
+      value: 53.0142
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.16343534
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.0023721887
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.98628914
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0.022737434
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 177.474
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 341.167
       objectReference: {fileID: 0}
     - target: {fileID: 3220763932315233728, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 360
+      value: 539.305
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769993112450997777, guid: ced9e02478407e2478f5ec058d5c8e5e, type: 3}
+      propertyPath: chaseSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
